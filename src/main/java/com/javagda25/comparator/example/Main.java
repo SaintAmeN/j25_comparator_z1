@@ -20,9 +20,9 @@ public class Main {
 
         students.addAll(Arrays.asList(s1, s9, s3, s6, s2, s7, s32, s63));
 
-        StudentComparator studentComparator = new StudentComparator();
-        Collections.sort(students, studentComparator);
-
-        students.forEach(System.out::println);
+//        StudentComparator studentComparator = new StudentComparator();
+//        Collections.sort(students, studentComparator);
+//
+//        students.forEach(System.out::println);
     }
 }
