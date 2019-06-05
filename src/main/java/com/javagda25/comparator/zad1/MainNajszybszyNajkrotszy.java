@@ -23,4 +23,14 @@ public class MainNajszybszyNajkrotszy {
         Collections.sort(osobas, (o1, o2) -> Integer.compare(o1.getWiek(), o2.getWiek()));
         System.out.println(osobas);
     }
+
+    public static int metodaPorownojaca(int opcja_a, int opcja_b) {
+        // jeśli opcja_a > opcja_b = zwróć opcja_a;
+        // w przeciwnym razie zwróć opcja_b
+//        return (opcja_a > opcja_b) ? opcja_a : opcja_b;
+
+        // jeśli opcja_a > opcja_b = zwróć opcja_a;
+        // w przeciwnym razie porównaj czy są sobie równe
+        return (opcja_a > opcja_b) ? opcja_a : (opcja_a == opcja_b ? 0 : opcja_b);
+    }
 }

@@ -2,12 +2,12 @@ package com.javagda25.comparator.example;
 
 import java.util.Comparator;
 
-public class StudentComparator implements Comparator<Student> {
+public class StudentComparator2 implements Comparator<Student> {
 
-    private boolean rosnacy;
+    private int rosnacy;
 
-    public StudentComparator(boolean rosnacy) {
-        this.rosnacy = rosnacy;
+    public StudentComparator2(boolean rosnacy) {
+        this.rosnacy = rosnacy ? 1 : -1;
     }
 
     @Override
@@ -17,21 +17,19 @@ public class StudentComparator implements Comparator<Student> {
         // jeśli o1 == o2 zwróć 0
 
         // indeks
-        if (rosnacy) {
-            if (o1.getIndeks() > o2.getIndeks()) {
-                return 1;
-            } else if (o1.getIndeks() < o2.getIndeks()) {
-                return -1;
-            }
-        } else {
-            if (o1.getIndeks() > o2.getIndeks()) {
-                return -1;
-            } else if (o1.getIndeks() < o2.getIndeks()) {
-                return 1;
-            }
+        if (o1.getIndeks() > o2.getIndeks()) {
+            return -1 ;
+        } else if (o1.getIndeks() < o2.getIndeks()) {
+            return 1 ;
+        }
+
+        // kryterium długości imienia
+        if (o1.getImie().length() > o2.getImie().length()) {
+            return -1;
+        } else if (o1.getImie().length() < o2.getImie().length()) {
+            return 1;
         }
         return 0;
-
         // alfabetycznie
 //        return o1.getImie().compareTo(o2.getImie());
 
